@@ -1,28 +1,23 @@
 # mssoftjp Homebrew tap
 
-LazySpace tiles the windows inside each macOS Space. Install it with:
+Homebrew casks for apps by mssoftjp.
+
+| Cask | App |
+|---|---|
+| `lazyspace` | [LazySpace](https://github.com/mssoftjp/LazySpace): tiles the windows inside each macOS Space |
 
 ```bash
-brew install --cask mssoftjp/tap/lazyspace
+brew install --cask mssoftjp/tap/<cask>
+brew upgrade --cask mssoftjp/tap/<cask>
+brew uninstall --cask mssoftjp/tap/<cask>
 ```
 
-The cask installs LazySpace.app and the `lazyspace` command. It requires macOS 14
-or later and Apple Silicon. Open the app and turn on LazySpace in System Settings ›
-Privacy & Security › Device Control and Data Access (Accessibility before macOS 27).
+Replace `<cask>` with a name from the table, such as `lazyspace`. Uninstalling keeps the
+app's settings; `brew uninstall --cask --zap mssoftjp/tap/<cask>` also removes the files
+the cask lists as its settings. Requirements and first-run steps are in each app's README.
 
-To upgrade or uninstall:
+## 日本語
 
-```bash
-brew upgrade --cask mssoftjp/tap/lazyspace
-brew uninstall --cask mssoftjp/tap/lazyspace
-```
-
-Uninstalling keeps your settings. To remove the configuration and saved state as well,
-run `brew uninstall --cask --zap mssoftjp/tap/lazyspace`.
-
-[Documentation and source](https://github.com/mssoftjp/LazySpace) ·
-[Releases](https://github.com/mssoftjp/LazySpace/releases) ·
-[日本語](https://github.com/mssoftjp/LazySpace/blob/main/README.ja.md)
-
-Maintainers: release preparation is documented in
-[RELEASING.md](https://github.com/mssoftjp/LazySpace/blob/main/packaging/RELEASING.md).
+mssoftjpのアプリをHomebrewで配布するtapです。上の表のcask名を指定してインストールします。
+アンインストールしても設定は残ります。`--zap`を付けると、caskに登録された設定ファイルも削除します。
+動作要件と初回の設定は、各アプリのREADMEにあります。
